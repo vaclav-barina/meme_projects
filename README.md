@@ -1,5 +1,5 @@
 # meme_projects
-Projects to reinforce SWE skills. Creating a set of projcets to brush up on coding. Projects are basic, common. 
+Projects to reinforce SWE skills. Creating a set of projcets to brush up on coding. Projects are basic intro projects done by beginners in an intro to programming/cs course. 
 
 Planned list of projects
 1. Tic-Tac-Toe (no object)

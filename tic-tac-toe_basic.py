@@ -27,16 +27,15 @@ def modify_board(new_piece_location, board, player_piece):
     return board
 
 def check_win_condition(board): 
-    # TODO: Check rows / cols
+    board_columns = [list(col) for col in zip(*board)] # Transposes the board to get a list of columns
+    board_diagonals = [[board[i][i] for i in range(3)], [board[i][2 - i] for i in range(3)]]
+    board_rows = board
+
+    lines = board_rows + board_columns + board_diagonals
+
+    for line in lines:
+        # print(f'Line is {line}')
+        if line[0] != ' ' and all(piece == line[0] for piece in line):
+            return True
     
-    # TODO: Check diags
-
-    # Players play
-
-    # Place piece
-    # Print board state
-    # Check for win condition 
-
-# When win condition exit loop and declare winner
-
-# End program
+    return None 

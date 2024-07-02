@@ -1,6 +1,7 @@
-# Initial pass at tic-tac-toe
+# TODO: Generalize board formation 
+# TODO: Add doc strings to functions
+# TODO: Add checks for illegal moves. Move user input into the functions
 
-# Intialize the board
 ROWS = 3
 FILLER_CHAR = ' '
 
@@ -8,7 +9,6 @@ def initialize_board():
     board = [[' ' for _ in range(ROWS)] for _ in range(ROWS)]
     return board
 
-# Visualize the board
 def visualize_board(board):
     for i, row in enumerate(board):
         print(" | ".join(row))
@@ -17,7 +17,6 @@ def visualize_board(board):
         else: 
             print("-"*9)
 
-# Add a piece to the board
 def modify_board(new_piece_location, board, player_piece):
     row_location = (new_piece_location - 1) // 3
     col_location = (new_piece_location - 1) % 3
@@ -38,4 +37,4 @@ def check_win_condition(board):
         if line[0] != ' ' and all(piece == line[0] for piece in line):
             return True
     
-    return None 
+    return False 
